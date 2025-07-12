@@ -1,0 +1,235 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  background: #ffe4ec;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2vw;
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+}
+.platform-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.login-btn {
+  background: #fff;
+  border: 2px solid #333;
+  border-radius: 1.5em;
+  padding: 0.4em 1.2em;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.filter-search {
+  display: flex;
+  gap: 0.5em;
+  justify-content: center;
+  align-items: center;
+  padding: 1em 0.5em;
+  background: #fff;
+  flex-wrap: wrap;
+}
+.availability-filter, .search-bar {
+  padding: 0.5em;
+  border-radius: 0.5em;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+.search-btn {
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  border: none;
+  background: #e0eefe;
+  color: #222;
+  font-weight: 500;
+  cursor: pointer;
+}
+.profile-list {
+  max-width: 600px;
+  margin: 2em auto 1em auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+.profile-card {
+  background: #fff;
+  border-radius: 1.2em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 1.2em 1.5em;
+  display: flex;
+  align-items: center;
+  gap: 1.2em;
+  flex-wrap: wrap;
+}
+.profile-photo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9em;
+  color: #888;
+  border: 2px solid #bbb;
+  flex-shrink: 0;
+}
+.profile-info {
+  flex: 1 1 180px;
+  min-width: 150px;
+}
+.profile-name {
+  font-weight: 600;
+  font-size: 1.1em;
+  margin-bottom: 0.2em;
+}
+.skills-offered {
+  color: #22c55e;
+  font-size: 0.95em;
+  margin-right: 0.5em;
+}
+.skills-wanted {
+  color: #2563eb;
+  font-size: 0.95em;
+}
+.skill-badge {
+  display: inline-block;
+  background: #f3f4f6;
+  border-radius: 1em;
+  padding: 0.2em 0.8em;
+  margin: 0 0.2em 0.2em 0;
+  font-size: 0.95em;
+  border: 1px solid #d1d5db;
+}
+.request-btn {
+  background: #7dd3fc;
+  color: #222;
+  border: none;
+  border-radius: 0.7em;
+  padding: 0.7em 1.5em;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.request-btn:hover {
+  background: #38bdf8;
+}
+.rating {
+  font-size: 0.98em;
+  color: #555;
+  margin-top: 0.5em;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3em;
+  margin-bottom: 2em;
+}
+.page-btn {
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 1.1em;
+  padding: 0.3em 0.7em;
+  border-radius: 0.4em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.page-btn.active, .page-btn:hover {
+  background: #e0eefe;
+  color: #2563eb;
+}
+.modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.modal.hidden {
+  display: none;
+}
+.modal-content {
+  background: #fff;
+  padding: 2em 2.5em;
+  border-radius: 1em;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+  text-align: center;
+  position: relative;
+}
+.close-btn {
+  position: absolute;
+  top: 0.7em;
+  right: 1em;
+  font-size: 1.3em;
+  color: #888;
+  cursor: pointer;
+}
+.user-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.avatar-container {
+  display: flex;
+  align-items: center;
+}
+.avatar-img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 8px rgba(80,80,160,0.13);
+}
+.bell-icon {
+  font-size: 1.5em;
+  margin-right: 0.7em;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.bell-icon:hover {
+  color: #2563eb;
+}
+.logout-btn {
+  background: #fee2e2;
+  color: #b91c1c;
+  border: none;
+  border-radius: 1.2em;
+  padding: 0.5em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.logout-btn:hover {
+  background: #fca5a5;
+}
+@media (max-width: 600px) {
+  .profile-list {
+    max-width: 98vw;
+    margin: 1em auto;
+  }
+  .profile-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1em 0.7em;
+  }
+  .filter-search {
+    flex-direction: column;
+    gap: 0.7em;
+    align-items: stretch;
+  }
+  .navbar {
+    flex-direction: column;
+    gap: 0.7em;
+    align-items: flex-start;
+  }
+} 

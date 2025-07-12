@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skill Swap Platform</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="platform-name">Skill Swap Platform</div>
+    <div class="nav-actions">
+      <button class="login-btn">Login</button>
+      <div class="user-header" style="display:none">
+        <span class="bell-icon" title="Notifications" style="cursor:pointer;font-size:1.5em;margin-right:0.7em;">🔔</span>
+        <span class="avatar-container"><img class="avatar-img" src="../assets/avatar.png" alt="User" /></span>
+        <button class="logout-btn" style="margin-left:1em;">Logout</button>
+      </div>
+    </div>
+  </nav>
+  <div class="filter-search">
+    <select class="availability-filter" title="Filter by availability">
+      <option>Availability</option>
+      <option>Available</option>
+      <option>Unavailable</option>
+    </select>
+    <input type="text" class="search-bar" placeholder="Search..." />
+    <button class="search-btn">Search</button>
+  </div>
+  <main class="profile-list">
+    <!-- Profile cards will be injected here by JS -->
+  </main>
+  <div class="pagination">
+    <!-- Pagination controls will be injected here by JS -->
+  </div>
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <p>Please log in to send a request.</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html> 

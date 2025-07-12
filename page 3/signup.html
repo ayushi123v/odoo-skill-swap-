@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skill Swap Platform</title>
+  <link rel="stylesheet" href="signup.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>🎯 Skill Swap Platform</h1>
+
+    <div class="tabs">
+      <div class="tab active" onclick="showTab('profile')">Profile</div>
+      <div class="tab" onclick="showTab('browse')">Browse</div>
+      <div class="tab" onclick="showTab('admin')">Admin</div>
+    </div>
+
+    <!-- Profile Form -->
+    <div id="profile" class="card tab-content">
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Enter your name">
+
+      <label for="location">Location (optional)</label>
+      <input type="text" id="location" placeholder="Enter your location">
+
+      <label for="offeredSkillsInput">Skills Offered (comma-separated)</label>
+<input type="text" id="offeredSkillsInput" placeholder="e.g., Photoshop, Excel, Guitar">
+
+<label for="wantedSkillsInput">Skills Wanted (comma-separated)</label>
+<input type="text" id="wantedSkillsInput" placeholder="e.g., Cooking, French, Photoshop">
+
+      <label for="availability">Availability</label>
+      <div class="skill-tags" id="availability"></div>
+
+      <label for="public">Public Profile</label>
+      <select id="public">
+        <option value="true">Yes</option>
+        <option value="false">No</option>
+      </select>
+
+      <label for="profilePhoto">Profile Photo (max 2MB)</label>
+      <input type="file" id="profilePhoto" accept="image/*" title="Upload your profile photo (max 2MB)" placeholder="Choose a profile photo" />
+
+      <button onclick="saveProfile()">Save Profile</button>
+    </div>
+
+    <!-- Browse Users -->
+    <div id="browse" class="card tab-content" style="display: none;">
+      <label>Search by skill</label>
+      <input type="text" placeholder="e.g., Photoshop">
+      <div style="margin-top: 1rem;">
+        <strong>Example Users:</strong>
+        <ul>
+          <li>User A — Offers: Photoshop, Wants: Cooking <button>Request Swap</button></li>
+          <li>User B — Offers: JavaScript, Wants: Excel <button>Request Swap</button></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Admin Panel -->
+    <div id="admin" class="card tab-content" style="display: none;">
+      <button>Ban User</button>
+      <button>Review Descriptions</button>
+      <button>Send Platform Message</button>
+      <button>Download Reports</button>
+    </div>
+  </div>
+
+  <script src="signup.js"></script>
+</body>
+</html>

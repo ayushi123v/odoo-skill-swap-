@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Profile | Skill Swap Platform</title>
+  <link rel="stylesheet" href="my-profile.css" />
+</head>
+<body>
+  <div class="profile-bg">
+    <nav class="navbar">
+      <div class="platform-name">Skill Swap Platform</div>
+      <a href="../page 1/index.html" class="home-link">Home</a>
+    </nav>
+    <div class="profile-container">
+      <h2>My Profile</h2>
+      <form id="myProfileForm" class="profile-form">
+        <div class="profile-photo-large" id="photoPreview">Profile Photo</div>
+        <label>Name</label>
+        <input type="text" id="name" required />
+        <label>Email</label>
+        <input type="email" id="email" required disabled />
+        <label>Skills Offered</label>
+        <input type="text" id="skillsOffered" placeholder="e.g. JavaScript, Python" />
+        <label>Skills Wanted</label>
+        <input type="text" id="skillsWanted" placeholder="e.g. Photoshop, Design" />
+        <label>Availability</label>
+        <input type="text" id="availability" placeholder="e.g. weekends, evenings" />
+        <label>Password</label>
+        <input type="password" id="password" placeholder="Change password" />
+        <label>Profile Photo (max 2MB)</label>
+        <input type="file" id="profilePhoto" accept="image/*" />
+        <label>Public Profile</label>
+        <select id="makePublic">
+          <option value="true">Yes</option>
+          <option value="false">No</option>
+        </select>
+        <button type="submit" class="save-btn">Save Changes</button>
+      </form>
+    </div>
+  </div>
+  <script src="my-profile.js"></script>
+</body>
+</html> 

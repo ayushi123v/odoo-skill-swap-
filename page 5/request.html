@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swap Request | Skill Swap Platform</title>
+  <link rel="stylesheet" href="request.css" />
+</head>
+<body>
+  <div class="request-bg">
+    <div class="request-container">
+      <form id="swapForm" class="swap-form">
+        <label for="mySkill" class="input-label">Choose one of your offered skills</label>
+        <select id="mySkill" name="mySkill" class="input-field" required>
+          <option value="">Select a skill</option>
+        </select>
+        <label for="theirSkill" class="input-label">Choose one of their wanted skills</label>
+        <select id="theirSkill" name="theirSkill" class="input-field" required>
+          <option value="">Select a skill</option>
+        </select>
+        <label for="message" class="input-label">Message</label>
+        <textarea id="message" name="message" class="input-field textarea" rows="4" placeholder="Write your message..."></textarea>
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+  <script src="request.js"></script>
+</body>
+</html> 
